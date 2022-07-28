@@ -1,11 +1,10 @@
 {
   "kind": "collectionType",
-  "collectionName": "albums",
+  "collectionName": "posts",
   "info": {
-    "singularName": "album",
-    "pluralName": "albums",
-    "displayName": "Albums",
-    "description": ""
+    "singularName": "post",
+    "pluralName": "posts",
+    "displayName": "posts"
   },
   "options": {
     "draftAndPublish": true
@@ -22,10 +21,9 @@
           "localized": true
         }
       },
-      "type": "string",
-      "required": true
+      "type": "string"
     },
-    "subtitle": {
+    "desc": {
       "pluginOptions": {
         "i18n": {
           "localized": true
@@ -33,41 +31,40 @@
       },
       "type": "string"
     },
-    "images": {
-      "type": "media",
-      "multiple": true,
-      "required": true,
+    "cover": {
       "allowedTypes": [
         "images",
         "files",
         "videos",
         "audios"
       ],
+      "type": "media",
+      "multiple": true,
       "pluginOptions": {
         "i18n": {
           "localized": false
         }
       }
     },
-    "date": {
+    "body": {
       "pluginOptions": {
         "i18n": {
           "localized": true
         }
       },
-      "type": "date"
+      "type": "richtext"
     },
-    "categories": {
+    "category": {
       "type": "relation",
-      "relation": "manyToMany",
+      "relation": "manyToOne",
       "target": "api::category.category",
-      "inversedBy": "albums"
+      "inversedBy": "posts"
     },
     "keywords": {
       "type": "relation",
       "relation": "manyToMany",
       "target": "api::keyword.keyword",
-      "inversedBy": "albums"
+      "inversedBy": "posts"
     }
   }
 }

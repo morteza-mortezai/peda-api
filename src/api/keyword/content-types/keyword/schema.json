@@ -1,10 +1,10 @@
 {
   "kind": "collectionType",
-  "collectionName": "categories",
+  "collectionName": "keywords",
   "info": {
-    "singularName": "category",
-    "pluralName": "categories",
-    "displayName": "categories"
+    "singularName": "keyword",
+    "pluralName": "keywords",
+    "displayName": "keywords"
   },
   "options": {
     "draftAndPublish": true
@@ -22,20 +22,25 @@
         }
       },
       "type": "string",
-      "required": true,
-      "unique": true
+      "required": true
+    },
+    "countries": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::country.country",
+      "inversedBy": "keywords"
     },
     "albums": {
       "type": "relation",
       "relation": "manyToMany",
       "target": "api::album.album",
-      "mappedBy": "categories"
+      "inversedBy": "keywords"
     },
     "posts": {
       "type": "relation",
-      "relation": "oneToMany",
+      "relation": "manyToMany",
       "target": "api::post.post",
-      "mappedBy": "category"
+      "inversedBy": "keywords"
     }
   }
 }

@@ -1,0 +1,30 @@
+{
+  "kind": "collectionType",
+  "collectionName": "orders",
+  "info": {
+    "singularName": "order",
+    "pluralName": "orders",
+    "displayName": "order"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "country": {
+      "type": "string"
+    },
+    "phone": {
+      "type": "biginteger"
+    },
+    "email": {
+      "type": "email"
+    },
+    "details": {
+      "type": "string"
+    }
+  }
+}
