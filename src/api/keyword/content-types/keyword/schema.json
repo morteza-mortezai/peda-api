@@ -41,6 +41,12 @@
       "relation": "manyToMany",
       "target": "api::post.post",
       "inversedBy": "keywords"
+    },
+    "products": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::product.product",
+      "inversedBy": "keywords"
     }
   }
 }
