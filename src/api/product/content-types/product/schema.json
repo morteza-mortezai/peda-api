@@ -25,9 +25,9 @@
       "type": "string",
       "required": true
     },
-    "images": {
+    "cover": {
       "type": "media",
-      "multiple": true,
+      "multiple": false,
       "required": false,
       "allowedTypes": [
         "images",
@@ -41,21 +41,13 @@
         }
       }
     },
-    "subtitle": {
+    "body": {
       "pluginOptions": {
         "i18n": {
           "localized": true
         }
       },
       "type": "richtext"
-    },
-    "date": {
-      "pluginOptions": {
-        "i18n": {
-          "localized": true
-        }
-      },
-      "type": "date"
     },
     "category": {
       "type": "relation",
@@ -68,6 +60,14 @@
       "relation": "manyToMany",
       "target": "api::keyword.keyword",
       "inversedBy": "products"
+    },
+    "desc": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "type": "string"
     }
   }
 }
