@@ -28,7 +28,7 @@
       "type": "relation",
       "relation": "manyToMany",
       "target": "api::country.country",
-      "inversedBy": "keywords"
+      "mappedBy": "keywords"
     },
     "albums": {
       "type": "relation",
